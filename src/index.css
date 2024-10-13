@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  ::selection{
+    background-color: #FFC8B3;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Adjust width as needed */
+  background:rgba(128, 128, 128, 0.404);
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* ---------------------------------carouselAnimation---------------------------- */
+.carouselClass{
+animation: carouselAnimation 15s infinite forwards;
+}
+
+@keyframes carouselAnimation {
+
+0%{
+  transform: translateX(0%);  
+}
+24%{
+  transform: translateX(0%);
+}
+25%{
+  transform: translateX(-100%);
+}
+49%{
+  transform: translateX(-100%);
+}
+50%{
+  transform: translateX(-200%);
+}
+74%{
+  transform: translateX(-200%);
+}
+75%{
+  transform: translateX(-300%);
+}
+99%{
+  transform: translatex(-300%);
+}
+100%{
+  transform: translatex(-400%);
+}
+}
+
+
+.singleProductSlider{
+  animation:single 10s infinite;
+}
+
+@keyframes single{
+  0%{
+    transform: translateX(10%);
+  }
+  24%{
+    transform: translateX(10%);
+  }
+  25%{
+    transform: translateX(-75%);
+  }
+  49%{
+    transform: translateX(-75%);
+  }
+  50%{
+    transform: translateX(-155%);
+  }
+  74%{
+    transform: translateX(-155%);
+  }
+  75%{
+    transform: translateX(-227%);
+  }
+  99%{
+    transform: translateX(-227%);
+  }
+  100%{
+    transform: translateX(-400%);
+  }
+}
+
+
+.walkerDiv{
+  filter: blur(15px);
+  opacity: .5;
+  transform: rotate(-25deg);
+  border-radius:50px;
+  animation: walker 2s infinite;
+}
+@keyframes walker {
+  from{
+    transform: translateX(0%);
+   
+  }
+  from{
+    transform: translateX(-600%);
+  }
+}
